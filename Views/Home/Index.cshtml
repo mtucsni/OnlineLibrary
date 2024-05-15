@@ -1,0 +1,27 @@
+﻿@page
+@model IEnumerable<OnlineLibrary.Models.Book>
+@using OnlineLibrary.Models
+
+@{
+    ViewData["Title"] = "Books";
+}
+
+<h2>Books</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.Title</td>
+                <td>@book.Author</td>
+            </tr>
+        }
+    </tbody>
+</table>
